@@ -1,0 +1,179 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(204, 201, 196);
+    padding: 100px;
+    overflow-x: auto;
+}
+
+main{
+    width: 100%;
+    overflow-x: auto;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 500px;
+}
+
+.head{
+    height: 55px;
+    background-color: rgb(86, 164, 203);
+    font-size: 19px;
+    color: white;
+    font-weight: bold;
+}
+
+.body{
+    height: 55px;
+    background-color: white;
+    font-size: 17px;
+    text-indent: 10px;
+}
+
+a{
+    padding: 10px;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 4px;
+    color: white;
+    text-decoration: none;
+}
+.edit{
+    background-color: rgb(15, 203, 46);
+    
+}
+.delete{
+    background-color:red;
+}
+.actions{
+    text-align: center;
+    width: 170px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+main div{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+main div button{
+    background-color: rgb(86, 164, 203);
+    padding: 15px 10px;
+    border: none;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 5px 4px 8px rgb(149, 141, 141);
+    cursor: pointer;
+}
+.submitform{
+    padding: 10px;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 4px;
+    color: white;
+    background-color: blue;
+}
+.overlay{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(50, 44, 44, 0.481);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.hideoverlay{
+    display: flex;
+}
+
+ .forminput{
+    width: 60%;
+    background-color: rgb(146, 176, 181);
+    padding: 30px;
+    border-radius: 10px;
+   
+}
+.forms{
+     display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+input{
+    /* width: 100%; */
+} 
+
+.input{
+    display: flex;
+    width: 50%;
+    gap: 14px;
+  
+    align-items: center;
+}
+
+.input label{
+    font-size: 22px;
+    font-weight: bold;
+}
+.input input{
+    height: 35px;
+    width: 100%;
+    text-indent: 8px;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    border-radius: 9px;
+}
+
+.upload{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+.upload label{
+    background-color: azure;
+    padding: 7px;
+    font-size: 18px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 8px rgb(149, 141, 141);
+    transition: all 0.3s linear;
+}
+.upload label:active{
+    transform: scale(1.2);
+}
+
+.buttonpos{
+    display: flex;
+    gap: 20px;
+}
