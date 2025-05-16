@@ -58,7 +58,9 @@ a{
     text-align: center;
     width: 170px;
 }
-
+.deletenow{
+    color: white;
+}
 
 
 
@@ -160,6 +162,11 @@ input{
     margin-top: 40px;
     display: flex;
     justify-content: space-between;
+    cursor: pointer;
+}
+.buttondelete{
+    justify-content: flex-end;
+    cursor: pointer;
 }
 .upload label{
     background-color: azure;

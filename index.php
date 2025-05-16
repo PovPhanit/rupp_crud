@@ -18,8 +18,17 @@
 
 
   if(isset($_GET['delete'])){
-    $id = $_GET['delete'];
+    // $id = $_GET['delete'];
+    // mysqli_query($connection,"delete from posts where posts_id = $id");
+    $showdelete = "hideoverlay";
+  }else{
+    $showdelete="";
+  }
+
+  if(isset($_POST['submitdelete'])){
+     $id = $_GET['delete'];
     mysqli_query($connection,"delete from posts where posts_id = $id");
+    $showdelete="";
   }
 
 
@@ -68,11 +77,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/styless.css">
 </head>
 
 <body>
-    <div class="overlay <?php echo $show; ?>">
+    <div class="overlay overlaypost <?php echo $show; ?>">
         <div class="forminput">
             <form action="" method="post" enctype="multipart/form-data">
                 <div class="forms">
@@ -89,7 +98,7 @@
                     <label for="imageUpload" name="image" >Upload Image</label>
                     <input type="file" name="image" value="<?php echo $image; ?>" id="imageUpload" hidden>
                     <div class="buttonpos">
-                        <a class="delete cancelpost">Cancel</a>
+                        <a class="delete cancelpost cancelposts">Cancel</a>
 
                         <?php
                             if($show==""){
@@ -99,6 +108,20 @@
                             }
                         ?>
                         
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="overlay overlaydelete  <?php echo $showdelete; ?>">
+        <div class="forminput">
+            <form action="" method="post" enctype="multipart/form-data">
+                <h1 class="deletenow">Delete</h1>
+                <hr>
+                <div class="upload buttondelete">
+                    <div class="buttonpos">
+                        <a class="delete cancelpost canceldelete">Cancel</a>
+                        <input class="submitform" type="submit" name="submitdelete" value="Delete">
                     </div>
                 </div>
             </form>
@@ -154,6 +177,6 @@
             </table>
    </main>
 
-  <script src="javascript/script.js"></script>
+  <script src="javascript/scripts.js"></script>
 </body>
 </html>
